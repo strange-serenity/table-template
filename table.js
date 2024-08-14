@@ -15,7 +15,7 @@ function createTableRow(rowData) {
         const cell = document.createElement('td');
         let value = rowData[key];
 
-        if (key.includes('Diff')) {
+        if (key.includes('Diff') || key.includes('diff')) {
             cell.classList.add('diff');
             if (value > 0) {
                 cell.classList.add('positive');
