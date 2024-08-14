@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица с форматированием чисел</title>
+    <style>
+        * {
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th.date-time, th.hour, td.date-time, td.hour {
+            background-color: #a8a8a8;
+            color: white;
+        }
+        th.diff {
+            background-color: blue;
+            color: white;
+        }
+        td.diff {
+            background-color: #dadada;
+        }
+        th:not(.date-time):not(.hour):not(.diff) {
+            background-color: blue;
+            color: white;
+        }
+        .negative {
+            color: #ee0000;
+        }
+        .positive {
+            color: green;
+        }
+        .zero {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th class="date-time">Дата и время</th>
+        <th class="hour">Час</th>
+        <th>Факт (общий)</th>
+        <th>План (общий)</th>
+        <th class="diff">+/-</th>
+        <th>Кокс факт</th>
+        <th>Кокс план</th>
+        <th class="diff">+/-</th>
+        <th>Агломерат факт</th>
+        <th>Агломерат план</th>
+        <th class="diff">+/-</th>
+        <th>Руда факт</th>
+        <th>Руда план</th>
+        <th class="diff">+/-</th>
+        <th>ШО факт</th>
+        <th>ШО план</th>
+    </tr>
+    </thead>
+    <tbody id="data-table">
+    <!-- Данные будут добавлены с помощью JavaScript -->
+    </tbody>
+</table>
+
+<script src="table.js"></script>
+</body>
+</html>
